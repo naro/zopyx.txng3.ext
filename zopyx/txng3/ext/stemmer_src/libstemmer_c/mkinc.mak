@@ -15,6 +15,7 @@ src_c/stem_ISO_8859_1_portuguese.c \
 src_c/stem_ISO_8859_1_spanish.c \
 src_c/stem_ISO_8859_1_swedish.c \
 src_c/stem_KOI8_R_russian.c \
+src_c/stem_UTF_8_czech.c \
 src_c/stem_UTF_8_danish.c \
 src_c/stem_UTF_8_dutch.c \
 src_c/stem_UTF_8_english.c \
@@ -47,6 +48,7 @@ src_c/stem_ISO_8859_1_portuguese.h \
 src_c/stem_ISO_8859_1_spanish.h \
 src_c/stem_ISO_8859_1_swedish.h \
 src_c/stem_KOI8_R_russian.h \
+src_c/stem_UTF_8_czech.h \
 src_c/stem_UTF_8_danish.h \
 src_c/stem_UTF_8_dutch.h \
 src_c/stem_UTF_8_english.h \

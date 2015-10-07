@@ -8,6 +8,7 @@
  * russian, spanish, swedish, turkish
  */
 
+#include "../src_c/stem_UTF_8_czech.h"
 #include "../src_c/stem_ISO_8859_1_danish.h"
 #include "../src_c/stem_UTF_8_danish.h"
 #include "../src_c/stem_ISO_8859_1_dutch.h"
@@ -62,12 +63,13 @@ static struct stemmer_encoding encodings[] = {
 
 struct stemmer_modules {
   const char * name;
-  stemmer_encoding_t enc; 
+  stemmer_encoding_t enc;
   struct SN_env * (*create)(void);
   void (*close)(struct SN_env *);
   int (*stem)(struct SN_env *);
 };
 static struct stemmer_modules modules[] = {
+  {"cs", ENC_UTF_8, czech_UTF_8_create_env, czech_UTF_8_close_env, czech_UTF_8_stem},
   {"da", ENC_ISO_8859_1, danish_ISO_8859_1_create_env, danish_ISO_8859_1_close_env, danish_ISO_8859_1_stem},
   {"da", ENC_UTF_8, danish_UTF_8_create_env, danish_UTF_8_close_env, danish_UTF_8_stem},
   {"dan", ENC_ISO_8859_1, danish_ISO_8859_1_create_env, danish_ISO_8859_1_close_env, danish_ISO_8859_1_stem},
@@ -170,21 +172,22 @@ static struct stemmer_modules modules[] = {
   {0,ENC_UNKNOWN,0,0,0}
 };
 static const char * algorithm_names[] = {
-  "danish", 
-  "dutch", 
-  "english", 
-  "finnish", 
-  "french", 
-  "german", 
-  "hungarian", 
-  "italian", 
-  "norwegian", 
-  "porter", 
-  "portuguese", 
-  "romanian", 
-  "russian", 
-  "spanish", 
-  "swedish", 
-  "turkish", 
+  "czech",
+  "danish",
+  "dutch",
+  "english",
+  "finnish",
+  "french",
+  "german",
+  "hungarian",
+  "italian",
+  "norwegian",
+  "porter",
+  "portuguese",
+  "romanian",
+  "russian",
+  "spanish",
+  "swedish",
+  "turkish",
   0
 };
