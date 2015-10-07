@@ -70,6 +70,7 @@ struct stemmer_modules {
 };
 static struct stemmer_modules modules[] = {
   {"cs", ENC_UTF_8, czech_UTF_8_create_env, czech_UTF_8_close_env, czech_UTF_8_stem},
+  {"czech", ENC_UTF_8, czech_UTF_8_create_env, czech_UTF_8_close_env, czech_UTF_8_stem},
   {"da", ENC_ISO_8859_1, danish_ISO_8859_1_create_env, danish_ISO_8859_1_close_env, danish_ISO_8859_1_stem},
   {"da", ENC_UTF_8, danish_UTF_8_create_env, danish_UTF_8_close_env, danish_UTF_8_stem},
   {"dan", ENC_ISO_8859_1, danish_ISO_8859_1_create_env, danish_ISO_8859_1_close_env, danish_ISO_8859_1_stem},
